@@ -21,17 +21,22 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 button {
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .container {
-  display: flex;
   width: 1200px;
-  height: 80px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 body {
@@ -51,7 +56,10 @@ body {
 /* -----------------HEADER----------------*/
 
 .primary-header {
+  display: flex;
   align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #ececec;
 }
 
 .logo-web {
@@ -128,14 +136,12 @@ body {
 /* -----------------HERO----------------- */
 
 .hero {
-  width: auto;
-  height: 600px;
   text-align: center;
+  width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  margin: auto;
   background-color: var(--primary-background-color);
-}
-
-.hero > .hero-title {
-  /* padding: 200px 467px 30px 437px; */
 }
 
 .hero-title {
@@ -144,7 +150,9 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  /* max-width: 696px; */
+  max-width: 696px;
+
+  margin: 0 auto;
 
   color: var(--secondary-color);
 }
@@ -156,18 +164,32 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--secondary-color);
-  /* margin-top: 30px; */
+  margin-top: 30px;
+
   background-color: var(--accent-color);
 }
 
 /* -----------skills----------------- */
 
+.skills {
+  padding: 94px auto;
+}
+
+.skills-list {
+  display: flex;
+}
+.skills-list .skills-item:not(:last-child) {
+  margin-right: 30px;
+}
 .skill-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
+
   color: var(--primary-color);
 }
 
@@ -175,22 +197,53 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: var(--primary-shade-color);
 }
 
-/* ------------SERTVISE and TEAM------------------- */
+/* ------------SERTVISE------------------- */
 
-.team {
-  background-color: var(--secondary-background-color);
-}
-
-.section-title {
+.service-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
   color: var(--primary-color);
+}
+
+.service-list {
+  display: flex;
+  margin-bottom: 94px;
+}
+
+.service-list .service-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/*--------------- TEAM -----------*/
+
+.team {
+  background-color: var(--secondary-background-color);
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list .team-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .teammate-name {
@@ -199,6 +252,8 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: var(--primary-color);
 }
 
@@ -212,6 +267,16 @@ body {
 }
 
 /* -----------------PORTFOLIO--filter-button---------------- */
+
+.filter-list {
+  display: flex;
+  margin-right: auto;
+  margin-left: 295px;
+}
+
+.filter-list .filter-item:not(:last-child) {
+  margin-right: 8px;
+}
 
 .secondary-button {
   font-family: inherit;
@@ -231,11 +296,26 @@ body {
   color: var(--secondary-color);
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-right: -30px;
+  margin-bottom: -30px;
+} */
+
+.project-item {
+  flex-basis: calc((100%-3 * 30) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
 .project-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-top: 20px;
+  margin-bottom: 4px;
+
   color: var(--primary-color);
 }
 .project-text {
@@ -247,16 +327,33 @@ body {
 /* ---------FOOTER------------------ */
 
 .footer {
+  width: 1600px;
+  height: 252px;
+  padding: 60px 215px;
+  margin: auto;
+  
   background-color: var(--primary-background-color);
 }
 
+/* .logo-web {
+  display: block;
+  margin-bottom: 20px;
+} */
 .logo-white {
   color: var(--secondary-shade-color);
+}
+
+.address {
+  margin-top: 20px;
 }
 
 .address :hover,
 .address :focus {
   color: var(--accent-color);
+}
+
+.address-list .address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-link {
