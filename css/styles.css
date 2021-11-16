@@ -23,6 +23,7 @@ ul {
 }
 
 button {
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -34,15 +35,12 @@ img {
 }
 
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 15px;
 }
 
 body {
@@ -64,7 +62,6 @@ body {
 .primary-header {
   display: flex;
   align-items: center;
-  height: 80px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -73,6 +70,7 @@ body {
 }
 
 .logo {
+  display: block;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -102,7 +100,7 @@ body {
   color: var(--accent-color);
 }
 
-.nav-list .nav-item:not(:last-child) {
+.nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -114,10 +112,13 @@ body {
 }
 
 .nav-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  padding: 32px 0;
 
   color: var(--primary-color);
 }
@@ -127,10 +128,14 @@ body {
 }
 
 .contact-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  padding: 9px 0;
+
   color: var(--primary-shade-color);
 }
 
@@ -143,9 +148,7 @@ body {
 
 .hero {
   text-align: center;
-  width: 1600px;
-  height: 600px;
-  padding-top: 200px;
+  padding: 200px 15px;
   margin: auto;
   background-color: var(--primary-background-color);
 }
@@ -170,6 +173,7 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--secondary-color);
+  padding: 10px 32px;
   margin-top: 30px;
 
   background-color: var(--accent-color);
@@ -178,13 +182,17 @@ body {
 /* -----------skills----------------- */
 
 .skills {
-  padding: 94px auto;
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 
 .skills-list {
   display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
 }
-.skills-list .skills-item:not(:last-child) {
+.skills-item:not(:last-child) {
   margin-right: 30px;
 }
 .skill-title {
@@ -200,6 +208,7 @@ body {
 }
 
 .skill-text {
+  max-width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -215,16 +224,17 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+
   color: var(--primary-color);
 }
 
 .service-list {
   display: flex;
-  margin-bottom: 94px;
+  padding-top: 50px;
+  justify-content: space-between;
 }
 
-.service-list .service-item:not(:last-child) {
+.service-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -246,10 +256,16 @@ body {
 
 .team-list {
   display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
-.team-list .team-item:not(:last-child) {
+.team-item:not(:last-child) {
   margin-right: 30px;
+}
+.teammate-background {
+  padding: 30px 0;
+  background-color: var(--secondary-color);
 }
 
 .teammate-name {
@@ -258,7 +274,6 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 30px;
   margin-bottom: 10px;
   color: var(--primary-color);
 }
@@ -276,11 +291,11 @@ body {
 
 .filter-list {
   display: flex;
-  margin-right: auto;
-  margin-left: 295px;
+  justify-content: center;
+  margin-bottom: 34px;
 }
 
-.filter-list .filter-item:not(:last-child) {
+.filter-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -291,6 +306,7 @@ body {
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
 
   color: var(--primary-color);
 }
@@ -305,14 +321,21 @@ body {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  justify-content: center;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .project-item {
   flex-basis: calc((100% - 3 * 30) / 3);
   margin-top: 30px;
   margin-left: 30px;
+}
+
+.project-backgraung {
+  padding: 20px 24px;
+  background-color: var(--secondary-color);
+  border: 1px solid #eeeeee;
 }
 
 .project-title {
@@ -334,12 +357,11 @@ body {
 /* ---------FOOTER------------------ */
 
 .footer {
-  width: 1600px;
-  height: 252px;
-  padding: 60px 215px;
-  margin: auto;
-
   background-color: var(--primary-background-color);
+}
+
+.footer-connection {
+  padding: 60px 0;
 }
 
 .logo-white {
@@ -347,16 +369,12 @@ body {
 }
 
 .address {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .address :hover,
 .address :focus {
   color: var(--accent-color);
-}
-
-.address-list .address-item:not(:last-child) {
-  margin-bottom: 9px;
 }
 
 .address-link {
