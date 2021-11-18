@@ -7,6 +7,8 @@
   --primary-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
   --address-shade-color: rgba(255, 255, 255, 0.6);
+  --primary-border-color: #ececec;
+  --secondary-border-color: #eeeeee;
 }
 
 p,
@@ -35,12 +37,14 @@ img {
 }
 
 .container {
+  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .section {
-  padding: 94px 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 body {
@@ -56,13 +60,18 @@ body {
 .link {
   text-decoration: none;
 }
+.block {
+  display: block;
+}
 
 /* -----------------HEADER----------------*/
 
+.header {
+  border-bottom: 1px solid var(--primary-border-color);
+}
 .primary-header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 
 .logo-web {
@@ -82,11 +91,11 @@ body {
 
 .nav {
   cursor: pointer;
+  margin-left: 93px;
 }
 
 .nav-list {
   display: flex;
-  margin-left: 93px;
 
   color: var(--primary-color);
 }
@@ -104,9 +113,10 @@ body {
   margin-right: 50px;
 }
 
-.contact-list .item + .item {
+.contact-list .contact-item + .contact-item {
   margin-left: 50px;
 }
+
 .contact-list {
   margin-left: auto;
 }
@@ -128,13 +138,10 @@ body {
 }
 
 .contact-link {
-  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
-  padding: 9px 0;
 
   color: var(--primary-shade-color);
 }
@@ -148,8 +155,8 @@ body {
 
 .hero {
   text-align: center;
-  padding: 200px 15px;
-  margin: auto;
+  padding: 200px 0;
+
   background-color: var(--primary-background-color);
 }
 
@@ -160,8 +167,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   max-width: 696px;
-
-  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto 30px auto;
 
   color: var(--secondary-color);
 }
@@ -174,21 +181,15 @@ body {
   letter-spacing: 0.06em;
   color: var(--secondary-color);
   padding: 10px 32px;
-  margin-top: 30px;
 
   background-color: var(--accent-color);
 }
 
 /* -----------skills----------------- */
 
-.skills {
-  /* margin-right: auto;
-  margin-left: auto; */
-}
-
 .skills-list {
   display: flex;
-  justify-content: space-between;
+
   margin-right: auto;
   margin-left: auto;
 }
@@ -231,7 +232,6 @@ body {
 .service-list {
   display: flex;
   padding-top: 50px;
-  justify-content: space-between;
 }
 
 .service-item:not(:last-child) {
@@ -257,14 +257,15 @@ body {
 .team-list {
   display: flex;
   margin: 0 auto;
-  justify-content: space-between;
 }
 
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
+
 .teammate-background {
   padding: 30px 0;
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--secondary-color);
 }
 
@@ -292,7 +293,7 @@ body {
 .filter-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter-item:not(:last-child) {
@@ -321,21 +322,22 @@ body {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: -30px;
-  margin-left: -30px;
+
+  margin-bottom: -30px;
+  margin-right: -30px;
 }
 
-.project-item {
+.project-item:not(:last-child) {
   flex-basis: calc((100% - 3 * 30) / 3);
-  margin-top: 30px;
-  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-right: 30px;
 }
 
 .project-backgraung {
   padding: 20px 24px;
   background-color: var(--secondary-color);
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--secondary-border-color);
+  border-top: none;
 }
 
 .project-title {
@@ -357,19 +359,13 @@ body {
 /* ---------FOOTER------------------ */
 
 .footer {
+  padding: 60px 0;
   background-color: var(--primary-background-color);
 }
 
-.footer-connection {
-  padding: 60px 0;
-}
-
 .logo-white {
+  margin-bottom: 20px;
   color: var(--secondary-shade-color);
-}
-
-.address {
-  padding-top: 20px;
 }
 
 .address :hover,
@@ -390,5 +386,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-bottom: 9px;
   color: var(--address-shade-color);
 }
