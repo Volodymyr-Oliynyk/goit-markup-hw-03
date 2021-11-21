@@ -59,9 +59,6 @@ body {
 .link {
   text-decoration: none;
 }
-.block {
-  display: block;
-}
 
 /* -----------------HEADER----------------*/
 
@@ -111,14 +108,6 @@ body {
   margin-right: 50px;
 }
 
-.contact-list .contact-item + .contact-item {
-  margin-left: 50px;
-}
-
-.contact-list {
-  margin-left: auto;
-}
-
 .nav-link {
   display: block;
   font-weight: 500;
@@ -133,9 +122,15 @@ body {
 
 .contact-list {
   display: flex;
+  margin-left: auto;
+}
+
+.contact-list .contact-item + .contact-item {
+  margin-left: 50px;
 }
 
 .contact-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -161,11 +156,9 @@ body {
 .hero-backgraund {
   max-width: 1600px;
   margin: 0 auto;
-  outline: 2px solid rgb(241, 19, 19);
-  /* background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4)
-  rgba(47, 48, 58, 0.4))
-  url(../img/hero-backgraund.svg) background: #C4C4C4;; */
+  /* outline: 2px solid rgb(241, 19, 19); */
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero-backgraund.svg);
   background-position: center;
 }
 
@@ -201,6 +194,13 @@ body {
   margin: 0 auto;
 }
 
+.skills-item::before {
+  content: '';
+  width: 10px;
+  height: 20px;
+  background-image: url(../img/skill-antenna.svg);
+  background-color: var(--secondary-background-color);
+}
 .skills-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -259,6 +259,10 @@ body {
 .team-list {
   display: flex;
   margin: 0 auto;
+}
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-item:not(:last-child) {
@@ -337,6 +341,11 @@ body {
   margin-right: 30px;
 }
 
+.project-item:hover .project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .project-backgraung {
   padding: 20px 24px;
 
@@ -400,4 +409,18 @@ body {
 
 .address-item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.contact-link-bottom {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-shade-color);
+}
+
+.contact-link-bottom:hover,
+.contact-link-bottom:focus {
+  color: var(--accent-color);
 }
